@@ -1,0 +1,10 @@
+
+if SHIELD_TEST
+
+config ZMK_KEYBOARD_NAME
+	default "nRFmicro"
+
+config ZMK_KSCAN_DIRECT_POLLING
+	default y
+	
+endif
