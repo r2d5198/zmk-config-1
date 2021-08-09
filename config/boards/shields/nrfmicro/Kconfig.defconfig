@@ -1,8 +1,10 @@
-if SHIELD_J64
+
+if SHIELD_NRFMICRO
 
 config ZMK_KEYBOARD_NAME
-	default "GK64"
+	default "test"
 
 config ZMK_KSCAN_DIRECT_POLLING
 	default y
+	
 endif

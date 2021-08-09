@@ -1,0 +1,25 @@
+
+if SHIELD_FUNSIZE_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "Funsize Left"
+
+endif
+
+if SHIELD_FUNSIZE_RIGHT
+
+config ZMK_KEYBOARD_NAME
+	default "Funsize Right"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+
+endif
+
+if SHIELD_FUNSIZE_LEFT || SHIELD_FUNSIZE_RIGHT
+
+config ZMK_SPLIT
+	default y
+
+endif
+

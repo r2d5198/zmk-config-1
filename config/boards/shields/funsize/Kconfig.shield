@@ -1,0 +1,8 @@
+# Copyright (c) 2021 Caleb Lightfoot
+# SPDX-License-Identifier: MIT
+
+config SHIELD_FUNSIZE_LEFT
+	def_bool $(shields_list_contains,funsize_left)
+
+config SHIELD_FUNSIZE_RIGHT
+	def_bool $(shields_list_contains,funsize_right)
