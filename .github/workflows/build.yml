@@ -33,19 +33,19 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (blechiffre)
-        run: west build -s zmk/app -b blechiffre -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: blechiffre DTS File
+      - name: West Build (ble_chiffre)
+        run: west build -s zmk/app -b ble_chiffre -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: ble_chiffre DTS File
         if: ${{ always() }}
-        run: cat -n build/zephyr/blechiffre.dts.pre.tmp
-      - name: blechiffre Kconfig file
+        run: cat -n build/zephyr/ble_chiffre.dts.pre.tmp
+      - name: ble_chiffre Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 blechiffre.uf2
-      - name: Archive (blechiffre)
+        run: cp build/zephyr/zmk.uf2 ble_chiffre.uf2
+      - name: Archive (ble_chiffre)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: blechiffre.uf2
+          path: ble_chiffre.uf2
      
 
