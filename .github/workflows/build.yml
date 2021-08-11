@@ -33,7 +33,7 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (Odd43)
+      - name: West Build (blechiffre)
         run: west build -s zmk/app -b blechiffre -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: blechiffre DTS File
         if: ${{ always() }}
@@ -42,7 +42,7 @@ jobs:
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 blechiffre.uf2
-      - name: Archive (Odd43)
+      - name: Archive (blechiffre)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
