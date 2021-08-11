@@ -92,7 +92,7 @@
     &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P
     &hm2 LGUI A &hm LALT S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp RET
     &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp FSLH
-    &kp LSHFT &hm1 LSHFT SPACE &bh 1 BSPC &mo 2 
+    &kp LSHFT &hm1 LCTRL SPACE &bh 1 BSPC &mo 2 
             >;
         };
 
