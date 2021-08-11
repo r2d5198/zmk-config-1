@@ -34,18 +34,18 @@ jobs:
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (Odd43)
-        run: west build -s zmk/app -b odd43 -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Odd43 DTS File
+        run: west build -s zmk/app -b blechiffre -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: blechiffre DTS File
         if: ${{ always() }}
-        run: cat -n build/zephyr/odd43.dts.pre.tmp
-      - name: Odd43 Kconfig file
+        run: cat -n build/zephyr/blechiffre.dts.pre.tmp
+      - name: blechiffre Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 odd43.uf2
+        run: cp build/zephyr/zmk.uf2 blechiffre.uf2
       - name: Archive (Odd43)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: odd43.uf2
+          path: blechiffre.uf2
      
 
